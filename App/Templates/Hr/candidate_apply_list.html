@@ -1,0 +1,35 @@
+{% extends 'Hr/profile.html' %}
+{% load static %}
+
+{% block maincontant %}
+
+<h1>{{recruiter_instance.Position}} Candidate List</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <!-- <th scope="col">Position</th> -->
+        <th scope="col"> Name</th>
+        <th scope="col"> mobile</th>
+        <th scope="col">Location</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Resume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for i in candidates %}
+        <!-- <th scope="row">1</th> -->
+        <!-- <td>{{i.id}}</td> -->
+        <td>{{i.Name}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.Location}}</td>
+        <td>{{i.DOB}}</td>
+        <td><a href="{{i.Resume.url}}" class="btn btn-success" download>Download</a></td>
+        <td></td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+  
+  
+{% endblock maincontant %}

@@ -1,0 +1,31 @@
+.Candidate_conatiner{
+  
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    /* height: 45vh; */
+    align-items: center;
+    gap: 80px;
+    margin-top: 50px;
+    /* border: solid black; */
+    flex-direction: column;
+  }
+  
+  
+.C_conatiner{
+    margin: 6px;
+    padding: auto;
+    /* border: solid black; */
+    /* height: 122px;
+    width: 122px; */
+    /* font-size: 50px; */
+    }
+  
+    /* .hitem img{
+      max-inline-size: 100%;
+      block-size: auto;
+      aspect-ratio: 2/1;
+      object-fit: cover;
+      height: 450px;
+    }
+   */

@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  /* background: #f2f2f2; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.fcontainer{
+  
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    /* height: 45vh; */
+    align-items: center;
+    gap: 80px;
+   
+   
+  
+    
+}
+
+.fitem{
+    margin: 6px;
+    padding: auto;
+    height: 122px;
+    width: 122px;
+    font-size: 50px;
+    gap: 30px;
+}
+.item{
+    align-self: center;
+    font-size: 40px;
+    
+}
+
+.icon{
+    font-size: 20px;
+}
+
+/* job listing */
+.jcontainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* background-color:rgb(30, 141, 210); */
+
+}
+.jitem{
+    margin: 6px;
+}
+
+.jobitem{
+    align-self: center;
+}
+
+.header_container{
+    background-color:rgb(15, 211, 133);
+
+    display: flex;
+    
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    /* height: 45vh; */
+    /* gap: 80px; */
+}
+.header_item{
+    /* background-color:chocolate; */
+    margin:25px;
+
+    /* padding: 20px; */
+    font-size: 30px;
+    
+    
+   
+}
+.header_item img{
+    max-inline-size: 105%;
+    block-size: auto;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    /* height: 300x; */
+    width: 750px;
+   
+  }
+
+.hitem{
+    align-self: center;
+    margin: 30px;
+
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+margin: 20px;  }
+
+
+.responsive-font-example{
+    max-inline-size: 100%;
+}

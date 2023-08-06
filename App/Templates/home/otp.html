@@ -1,0 +1,35 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="m-5 text-center">
+<div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+              {% endif %}
+
+            <form action="" method="POST">  {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">otp</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Example input" name="otp">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-success">verify</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<br>
+<br> 
+<br>
+<br>
+<br>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/stylecandidate.css' %}">
+
+{% endblock css %}
+
+
+ <!-- carosule -->
+ {% block content %}
+ <body>
+    <div class="text-center m-5">
+      {% for i in candidate_data %}
+              <!-- <img src="profile-picture.jpg" alt="Profile Picture" class="img-fluid rounded-circle mb-3"> -->
+              <h4>{{i.Name}}</h4>
+              <p class="text-muted">Web Developer</p>
+              <p><i class="fas fa-map-marker-alt"></i>{{i.Location}}</p>
+              <p><i class="fas fa-envelope"></i>{{i.user.email}}</p>
+              <p><i class="fas fa-phone"></i>{{i.mobile}}</p>
+              <a href="{% url 'Candidate_detail'  %}"  class="btn btn-success">Your Profile</a>
+
+            
+
+       {% empty %}
+       <p>please Add your personal details</p>
+       <a href="{% url 'Candidate_detail'  %}"  class="btn btn-success">ADD</a>
+
+       <br>
+
+   {% endfor %}
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+          
+ {% endblock content %}

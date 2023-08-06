@@ -1,0 +1,43 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="m-5 text-center">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-sm-6 offset-sm-3">
+               
+                <form action="" method="POST"> {% csrf_token %}
+                  
+                    <!-- <p>
+                        <label for="datepicker">Date of birth:</label>
+                        <input type="text" name="date_of_birth" class="form-control" id="datepicker" required>
+                    </p> -->
+
+
+                    <p>
+                        <label for="id_email">Email address:</label>
+                        <input type="email" name="email" class="form-control" maxlength="255" required id="id_email">
+                    </p>
+
+
+                    <p>
+                        <label for="id_password1">Password:</label>
+                        <input type="password" name="password1" class="form-control" required id="id_password1">
+                    </p>
+
+
+                    <p>
+                        <label for="id_password2">Confirm Password (again):</label>
+                        <input type="password" name="password2" class="form-control" required id="id_password2">
+                    </p>
+                   
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

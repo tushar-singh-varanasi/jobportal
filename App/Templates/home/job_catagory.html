@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="jcontainer">
+    <div class="jitem jobitem">
+      {% for i in form %}
+
+        <h5 class="mb-3">{{i.Position}}</h5>
+        <span class="text-truncate me-3"><i class="fa fa-building text-primary me-2"></i>{{i.Company_Name}}</span>
+        <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>varanasi</span>
+        <br>
+        <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
+        <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>{{i.Salary}}</span>
+       <small class="text-truncate"><i class="far fa-calendar-alt text-primary me-2"></i>{{i.date}}</small>
+     
+       <p class="responsive-font-example">{{i.job_description}}</p>
+          <br>
+           <a class="btn btn-primary" href="{% url 'apply' i.id %}">Apply Now</a>
+         <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a> 
+         {% empty %}
+         <h2>Sorry No job available</h2>
+         
+         {% endfor %}
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+{% endblock content %}

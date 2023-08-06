@@ -1,0 +1,37 @@
+{% extends 'Hr/profile.html' %}
+{% load static %}
+
+{% block maincontant %}
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th > Company_Name</th>
+        <th >Position</th>
+        <!-- <th  scope="col"> Categories</th> -->
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data %}
+     
+      <tr>
+        
+        <td>{{i.Company_Name}}</td>
+        <td>{{i.Position}}</td>
+        <!-- <td>{{i.Categories}}</td> -->
+        <td><a href="{% url 'job-post-update' i.id %}" class="btn btn-success">Update</a></td>
+        <td><a href="{% url 'Job_delete' i.id %}" class="btn btn-danger">delete</a></td>
+        <td><a href="{% url 'candidate_apply' i.id %}" class="btn btn-danger">candidate list</a></td>
+        
+        </tr>
+        {% empty %}
+        <h1> No data available </h1>
+        
+        {% endfor %}
+       
+     
+    </tbody>
+  </table>
+
+  
+{% endblock maincontant %}

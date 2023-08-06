@@ -1,0 +1,66 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+    <form action="" method="post"> {% csrf_token %}
+    <p>
+        <label for="id_Company_Name">Company Name:</label>
+        <input type="text" name="Company_Name" maxlength="180" required id="id_Company_Name" class="form-control">
+
+
+        </p>
+
+
+        <p>
+            <label for="id_Position">Position:</label>
+            <input type="text" name="Position" maxlength="150" required id="id_Position" class="form-control">
+
+
+        </p>
+
+
+        <p>
+            <label for="id_job_description">Job description:</label>
+            <textarea name="job_description" cols="40" rows="10" required id="id_job_description" class="form-control">
+                </textarea>
+
+
+        </p>
+
+
+        <p>
+            <label for="id_Salary">Salary:</label>
+            <input type="number" name="Salary" id="id_Salary" class="form-control">
+
+
+        </p>
+
+
+        <p>
+            <label for="id_Categories">Categories:</label>
+            <select name="Categories" id="id_Categories"  class="custom-select mr-sm-2">
+                <option value="" selected>---------</option>
+
+                <option value="marketing">marketing</option>
+
+                <option value="Information Tech">Information Tech</option>
+
+                <option value="Construction">Construction</option>
+
+                <option value=" Graphic design"> Graphic design</option>
+
+            </select>
+
+
+
+
+        </p>
+        <button type="submit" class="btn btn-success">submit</button>
+    </form>
+
+
+</div>
+{% endblock content %}
